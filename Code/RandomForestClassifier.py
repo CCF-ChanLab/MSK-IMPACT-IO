@@ -17,7 +17,6 @@ forest = RandomForestClassifier(min_samples_split=2, n_estimators=1000, max_dept
 forest.fit(x_train, y_train.values.ravel())
 forest_predict = forest.predict(x_test)
 
-
 ## Save response probability of each sample
 wf = open('Training_RF16_Prob.txt', 'w')
 for i in range(len(forest.predict_proba(x_train)[:,1])):
@@ -27,6 +26,7 @@ wf = open('Test_RF16_Prob.txt', 'w')
 for i in range(len(forest.predict_proba(x_test)[:,1])):
     wf.write(str(data_test['SAMPLE_ID'][i]) + '\t' + str(forest.predict_proba(x_test)[:,1][i]) + '\n')
 wf.close()
+
 
 ### RF11
 x_train = pd.DataFrame(data_train, columns=["HED", "TMB", "FGA", "BMI", "NLR", "Stage", "Age", "Drug", "HLA_LOH", "MSI","Sex"])
@@ -38,7 +38,6 @@ y_test = pd.DataFrame(data_test, columns=["Response"])
 forest = RandomForestClassifier(min_samples_split=2, n_estimators=1000, max_depth=8, min_samples_leaf=20, random_state = 0, n_jobs = -1)
 forest.fit(x_train, y_train.values.ravel())
 forest_predict = forest.predict(x_test)
-
 
 ## Save response probability of each sample
 wf = open('Training_RF11_Prob.txt', 'w')

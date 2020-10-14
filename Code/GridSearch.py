@@ -23,7 +23,7 @@ print('Optimal Hyper Parameter, RF16: ', grid_cv.best_params_)
 print('Maximum Accuracy, RF16: {:.4f}'.format(grid_cv.best_score_))
 
 ## GridSearchCV for RF11
-rf11=["HED", "TMB", "FGA", "BMI", "NLR", "Stage", "Age", "Drug", "HLA_LOH", "MSI", "Sex"]
+rf11=["HED", "TMB", "FCNA", "BMI", "NLR", "Stage", "Age", "Drug", "HLA_LOH", "MSI", "Sex"]
 
 x_train = pd.DataFrame(data, columns=rf11)
 rf_clf = RandomForestClassifier(random_state = 0, n_jobs = -1)

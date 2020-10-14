@@ -6,11 +6,11 @@ from sklearn.ensemble import RandomForestClassifier
 data_train = pd.read_excel('Data.xlsx', sheet_name='Training_80')
 data_test = pd.read_excel('Data.xlsx', sheet_name='Test_20')
 
-y_train = pd.DataFrame(data_train, columns=["Responder"])
-y_test = pd.DataFrame(data_test, columns=["Responder"])
+y_train = pd.DataFrame(data_train, columns=["Response"])
+y_test = pd.DataFrame(data_test, columns=["Response"])
 
 ### RF16
-rf16=["Cancer_Type2", "Albumin", "HED", "TMB", "FGA", "BMI", "NLR", "Platelets", "HGB","Stage", "Age", "Drug", "Chemo_before_IO", "HLA_LOH", "MSI","Sex"]
+rf16=["Cancer_Type2", "Albumin", "HED", "TMB", "FCNA", "BMI", "NLR", "Platelets", "HGB","Stage", "Age", "Drug", "Chemo_before_IO", "HLA_LOH", "MSI","Sex"]
 x_train = pd.DataFrame(data_train, columns=rf16)
 x_test = pd.DataFrame(data_test, columns=rf16)
 
@@ -31,7 +31,7 @@ wf.close()
 print("Feature Importance of RF16: \n{}".format(forest.feature_importances_))
 
 ### RF11
-rf11=["HED", "TMB", "FGA", "BMI", "NLR", "Stage", "Age", "Drug", "HLA_LOH", "MSI","Sex"]
+rf11=["HED", "TMB", "FCNA", "BMI", "NLR", "Stage", "Age", "Drug", "HLA_LOH", "MSI","Sex"]
 x_train = pd.DataFrame(data_train, columns=rf11)
 x_test = pd.DataFrame(data_test, columns=rf11)
 

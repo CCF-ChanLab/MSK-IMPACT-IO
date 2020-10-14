@@ -12,7 +12,7 @@ params = { 'n_estimators' : list(range(100, 1100, 100)),
 y_train = pd.DataFrame(data, columns=["Response"])
 
 ## GridSearchCV for RF16
-rf16=["Cancer_Type2", "Albumin", "HED", "TMB", "FGA", "BMI", "NLR", "Platelets", "HGB", "Stage", "Age", "Drug", "Chemo_before_IO", "HLA_LOH", "MSI", "Sex"]
+rf16=["Cancer_Type2", "Albumin", "HED", "TMB", "FCNA", "BMI", "NLR", "Platelets", "HGB", "Stage", "Age", "Drug", "Chemo_before_IO", "HLA_LOH", "MSI", "Sex"]
 
 x_train = pd.DataFrame(data, columns=rf16)
 rf_clf = RandomForestClassifier(random_state = 0, n_jobs = -1)

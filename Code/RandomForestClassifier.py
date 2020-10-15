@@ -1,6 +1,5 @@
 import csv
 import pandas as pd
-from sklearn import metrics
 from sklearn.ensemble import RandomForestClassifier
 
 data_train = pd.read_excel('Data.xlsx', sheet_name='Training_80')

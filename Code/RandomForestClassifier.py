@@ -2,11 +2,11 @@ import csv
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
-data_train = pd.read_excel('Data.xlsx', sheet_name='Training_80')
-data_test = pd.read_excel('Data.xlsx', sheet_name='Test_20')
+data_train = pd.read_excel('Data.xlsx', sheet_name='Training')
+data_test = pd.read_excel('Data.xlsx', sheet_name='Test')
 
-y_train = pd.DataFrame(data_train, columns=["Responder"])
-y_test = pd.DataFrame(data_test, columns=["Responder"])
+y_train = pd.DataFrame(data_train, columns=["Response"])
+y_test = pd.DataFrame(data_test, columns=["Response"])
 
 ### RF16
 rf16=["Cancer_Type2", "Albumin", "HED", "TMB", "FGA", "BMI", "NLR", "Platelets", "HGB","Stage", "Age", "Drug", "Chemo_before_IO", "HLA_LOH", "MSI","Sex"]

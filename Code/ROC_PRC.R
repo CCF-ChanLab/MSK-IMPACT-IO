@@ -14,7 +14,7 @@ mscurves
 ## Detect the optimal threshold, Pan-cancer
 prob_roc <- roc(data$Response, data$RF16_prob)
 par(pty="s")
-plot.roc(prob_roc, best.method="closest.topleft", col="red", print.auc=TRUE, print.auc.adj=c(2,-12),
+plot.roc(prob_roc, print.thres.best.method="youden", col="red", print.auc=TRUE, print.auc.adj=c(2,-12),
          max.auc.polygon=TRUE, print.thres=TRUE, print.thres.pch=19, print.thres.col = "red", print.thres.adj=c(0.3,-1.2),
          auc.polygon=TRUE, auc.polygon.col="#D1F2EB",legacy.axes = TRUE)
 legend("bottomright", legend=c("RF16"), col=c("red"), lwd=2) 
@@ -31,7 +31,7 @@ mscurves
 ## Detect the optimal threshold, Melanoma
 prob_roc <- roc(data2$Response, data2$RF16_prob)
 par(pty="s")
-plot.roc(prob_roc, best.method="closest.topleft", col="red", print.auc=TRUE, print.auc.adj=c(2,-12),
+plot.roc(prob_roc, print.thres.best.method="youden", col="red", print.auc=TRUE, print.auc.adj=c(2,-12),
          max.auc.polygon=TRUE, print.thres=TRUE, print.thres.pch=19, print.thres.col = "red", print.thres.adj=c(0.3,-1.2),
          auc.polygon=TRUE, auc.polygon.col="#D1F2EB",legacy.axes = TRUE)
 legend("bottomright", legend=c("RF16"), col=c("red"), lwd=2) 
@@ -48,7 +48,7 @@ mscurves
 ## Detect the optimal threshold, NSCLC
 prob_roc <- roc(data2$Response, data2$RF16_prob)
 par(pty="s")
-plot.roc(prob_roc, best.method="closest.topleft", col="red", print.auc=TRUE, print.auc.adj=c(2,-12),
+plot.roc(prob_roc, print.thres.best.method="youden", col="red", print.auc=TRUE, print.auc.adj=c(2,-12),
          max.auc.polygon=TRUE, print.thres=TRUE, print.thres.pch=19, print.thres.col = "red", print.thres.adj=c(0.3,-1.2),
          auc.polygon=TRUE, auc.polygon.col="#D1F2EB",legacy.axes = TRUE)
 legend("bottomright", legend=c("RF16"), col=c("red"), lwd=2) 
@@ -65,7 +65,7 @@ mscurves
 ## Detect the optimal threshold, Others
 prob_roc <- roc(data2$Response, data2$RF16_prob)
 par(pty="s")
-plot.roc(prob_roc, best.method="closest.topleft", col="red", print.auc=TRUE, print.auc.adj=c(2,-12),
+plot.roc(prob_roc, print.thres.best.method="youden", col="red", print.auc=TRUE, print.auc.adj=c(2,-12),
          max.auc.polygon=TRUE, print.thres=TRUE, print.thres.pch=19, print.thres.col = "red", print.thres.adj=c(0.3,-1.2),
          auc.polygon=TRUE, auc.polygon.col="#D1F2EB",legacy.axes = TRUE)
 legend("bottomright", legend=c("RF16"), col=c("red"), lwd=2) 

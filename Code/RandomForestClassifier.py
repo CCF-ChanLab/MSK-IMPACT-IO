@@ -24,7 +24,7 @@ with open('Training_RF16_Prob.txt', 'w', newline='') as wf:
     writer.writerows(zip(data_train['SAMPLE_ID'], forest.predict_proba(x_train)[:,1]))
 with open('Test_RF16_Prob.txt', 'w', newline='') as wf:
     writer = csv.writer(wf, delimiter='\t')
-    writer.writerows(zip(data_test['SAMPLE_ID'], forest.predict_proba(x_train)[:,1]))
+    writer.writerows(zip(data_test['SAMPLE_ID'], forest.predict_proba(x_test)[:,1]))
 print("Feature Importance of RF16: \n{}".format(forest.feature_importances_))
 
 
@@ -44,6 +44,6 @@ with open('Training_RF11_Prob.txt', 'w', newline='') as wf:
     writer.writerows(zip(data_train['SAMPLE_ID'], forest.predict_proba(x_train)[:,1]))
 with open('Test_RF11_Prob.txt', 'w', newline='') as wf:
     writer = csv.writer(wf, delimiter='\t')
-    writer.writerows(zip(data_test['SAMPLE_ID'], forest.predict_proba(x_train)[:,1]))
+    writer.writerows(zip(data_test['SAMPLE_ID'], forest.predict_proba(x_test)[:,1]))
 print("Feature Importance of RF11: \n{}".format(forest.feature_importances_))
 

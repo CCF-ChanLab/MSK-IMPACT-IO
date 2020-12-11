@@ -2,8 +2,8 @@ import csv
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
-data_train = pd.read_excel('Data.xlsx', sheet_name='Training')
-data_test = pd.read_excel('Data.xlsx', sheet_name='Test')
+data_train = pd.read_excel('61971_1_data_set_523545_qkrh1s.xlsx', sheet_name='Training')
+data_test = pd.read_excel('61971_1_data_set_523545_qkrh1s.xlsx', sheet_name='Test')
 
 y_train = pd.DataFrame(data_train, columns=['Response'])
 y_test = pd.DataFrame(data_test, columns=['Response'])

@@ -10,8 +10,8 @@ Please use all the data included in Dataset 1 which provided as supplementary da
 
 Description
 1.GridSearch.py: Generates hyperparameters for RF16 and RF11.
-2.RandomForestClassifier.py: Generates response probability of RF16 and 11. Output files are required to following steps. 
-3.ROC_PRC_Training.R: Generates receiver operating characteristic and precision-recall curves. Also creates outputs with pan-cancer threshold and cancer-type-specific threshold. 
+2.RandomForestClassifier.py: Generates response probability of RF16 and RF11. Outputs are required to following steps. 
+3.ROC_PRC_Training.R: Generates receiver operating characteristic and precision-recall curves. Also creates outputs with pan-cancer threshold and cancer-type-specific threshold for RF16. 
 4.ROC_PRC_Test.R: Generates receiver operating characteristic and precision-recall curves.  
 5.Evaluate_Performance_Training_Pan.py: Generates confusion matrix and evaluation metrics (sensitivity, specificity, accuracy, PPV, NPV) of each cancer type based on pan-cancer threshold. 
 6.Evaluate_Performance_Training.py: Generates confusion matrix and evaluation metrics (sensitivity, specificity, accuracy, PPV, NPV) of each cancer type based on cancer-type-specific threshold.

@@ -6,7 +6,7 @@ R (4.0.2): ggplot2 (3.3.2), precrec (0.11.2), pROC (1.16.2), pec (2019.11.3), su
 
 The scripts provided in this GitHub account should be executed in that particular order to generate the analysis presented in the manuscript.
 
-Please use the data which provided as supplementary data in the manuscript as the input.
+Please use the data which is provided as supplementary data in the manuscript as the input.
 
 Description
 1.GridSearch.py: Generates hyperparameters for RF16 and RF11.

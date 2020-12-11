@@ -29,7 +29,7 @@ forest11.fit(x_train11, y_train.values.ravel())
 forest11_predict = forest11.predict(x_test11)
 
 ## Save response probability of each sample
-header=['Sample_ID', 'Cancer_Type', 'Response', 'OS_Event', 'OS_Months', 'PFS_Event', 'PFS_Months', 'TMB_score', 'RF16_prob', 'RF11_prob']
+header=['Sample_ID', 'Cancer_Type', 'Response', 'OS_Event', 'OS_Months', 'PFS_Event', 'PFS_Months', 'TMB', 'RF16_prob', 'RF11_prob']
 with open('Training_RF_Prob.txt', 'w', newline='') as wf:
     wf.write('\t'.join(header) + '\n')
     writer = csv.writer(wf, delimiter='\t')

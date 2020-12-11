@@ -8,7 +8,7 @@ The scripts provided in this GitHub account should be executed in that particula
 
 Please use all the data included in Dataset 1 which provided as supplementary data in the manuscript as the input.
 
-Description of each code
+Description
 1.GridSearch.py: Generates hyperparameters for RF16 and RF11.
 2.RandomForestClassifier.py: Generates response probability of RF16 and 11. Output files are required to following steps. 
 3.ROC_PRC_Training.R: Generates receiver operating characteristic and precision-recall curves. Also creates outputs with pan-cancer threshold and cancer-type-specific threshold. 

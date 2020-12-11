@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 
-data = pd.read_excel('Data.xlsx', sheet_name='Training')
+data = pd.read_excel('61971_1_data_set_523545_qkrh1s.xlsx', sheet_name='Training')
 
 params = { 'n_estimators' : list(range(100, 1100, 100)),
            'max_depth' : list(range(2, 22, 2)),

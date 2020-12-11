@@ -88,7 +88,7 @@ def evaluation(input, target):
         specificity = float(tn) / (float(fp + tn)) * 100
         accuracy = float(tp + tn) / (float(tp + fp + fn + tn)) * 100
         ppv = float(tp) / (float(tp + fp)) * 100
-        npv =float(tn) / (float(fn + tn)) * 100
+        npv = float(tn) / (float(fn + tn)) * 100
         print(str(sensitivity) + '\t' + str(specificity) + '\t' + str(accuracy) + '\t' + str(ppv) + '\t' + str(npv) + '\n')
         rf.close()       
 

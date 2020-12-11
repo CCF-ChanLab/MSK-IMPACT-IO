@@ -3,4 +3,4 @@ Python3 (3.8.3): scikit-learn (0.23.1), pandas, csv
 R (4.0.2): ggplot2 (3.3.2), precrec (0.11.2), pROC (1.16.2), pec (2019.11.3), survcomp (1.38.0), survminer (0.4.8), survival (3.2.7)
 
 All results from the manuscript can be reproduced when the scripts are run following the order.
-Please use the Dataset 1 (61971_1_data_set_523545_qkrh1s.xlsx) as an input which is uploaded to the submitssion system.
+Please use the Dataset 1 (61971_1_data_set_523545_qkrh1s.xlsx) from the manuscript submitssion system as an input.

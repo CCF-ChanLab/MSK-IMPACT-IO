@@ -1,6 +1,9 @@
 import csv
 import pandas as pd
+import matplotlib.pyplot as plt
+import eli5
 from sklearn.ensemble import RandomForestClassifier
+from eli5.sklearn import PermutationImportance
 
 data_train = pd.read_excel('61971_1_data_set_523545_qkrh1s.xlsx', sheet_name='Training')
 data_test = pd.read_excel('61971_1_data_set_523545_qkrh1s.xlsx', sheet_name='Test')
@@ -41,9 +44,10 @@ with open('Test_RF_Prob.txt', 'w', newline='') as wf:
 
 ## Feature importance of RF16 & RF11
 print('\n<RF16_feature Importance>')
-for i,j in zip(rf16,list(forest16.feature_importances_)):
-    print(i,j)
+perm = PermutationImportance(forest16, scoring = "roc_auc", cv='prefit', random_state = 42).fit(x_train16, y_train)
+eli5.show_weights(perm, top = 16, feature_names = x_train16.columns.tolist())
 
 print('\n<RF11_feature Importance>')
-for i,j in zip(rf11,list(forest11.feature_importances_)):
-    print(i,j)
+perm = PermutationImportance(forest11, scoring = "roc_auc", cv='prefit', random_state = 42).fit(x_train11, y_train)
+eli5.show_weights(perm, top = 11, feature_names = x_train11.columns.tolist())
+
